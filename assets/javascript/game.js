@@ -59,5 +59,64 @@ $(document).ready(function () {
     $("#score").text(totalScore);
 
     // Onclick Events
+    $("#gem-red").on("click", function () {
+        if (totalScore > randomNum) {
+            losses++;
+            $("#message").text("You lost!");
+            $("#losses").text(losses);
+        } else if (totalScore === randomNum) {
+            wins++;
+            $("#message").text("You won!");
+            $("#wins").text(wins);
+        } else {
+            totalScore += gemRed;
+        }
+        $("#score").text(totalScore);
+    });
+
+    $("#gem-green").on("click", function () {
+        if (totalScore > randomNum) {
+            losses++;
+            $("#message").text("You lost!");
+            $("#losses").text(losses);
+        } else if (totalScore === randomNum) {
+            wins++;
+            $("#message").text("You won!");
+            $("#wins").text(wins);
+        } else {
+            totalScore += gemGreen;
+        }
+        $("#score").text(totalScore);
+    });
+
+    $("#gem-purple").on("click", function () {
+        if (totalScore > randomNum) {
+            losses++;
+            $("#message").text("You lost!");
+            $("#losses").text(losses);
+        } else if (totalScore === randomNum) {
+            wins++;
+            $("#message").text("You won!");
+            $("#wins").text(wins);
+        } else {
+            totalScore += gemPurple;
+        }
+        $("#score").text(totalScore);
+    });
+
+    $("#gem-blue").on("click", function () {
+        if (totalScore > randomNum) {
+            losses++;
+            $("#message").text("You lost!");
+            $("#losses").text(losses);
+        } else if (totalScore === randomNum) {
+            wins++;
+            $("#message").text("You won!");
+            $("#wins").text(wins);
+        } else {
+            totalScore += gemBlue;
+        }
+        $("#score").text(totalScore);
+    });
 
 });
