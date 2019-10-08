@@ -6,6 +6,13 @@ var wins = 0;
 var losses = 0;
 var randomNum = 0;
 
+var gemRed = 0;
+var gemGreen = 0;
+var gemPurple = 0;
+var gemBlue = 0;
+
+var gameOver = false;
+
 /*******************************************
 FUNCTIONS
 *******************************************/
@@ -19,17 +26,38 @@ function getRandomInt(min, max) {
     return randomNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 }
 
+function getRandomGem(min, max) {
+    /**
+    * Returns a random integer between min (inclusive) and max (inclusive).
+    **/
+    var min = Math.ceil(1);
+    var max = Math.floor(12);
+    return randomGem = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+}
+
 $(document).ready(function () {
     // display random Number chosen by computer
     getRandomInt();
     $("#random").text(randomNum);
 
+    // assign random Number to gems
+    gemRed = getRandomGem();
+    gemGreen = getRandomGem();
+    gemPurple = getRandomGem();
+    gemBlue = getRandomGem();
+    // TEST
+    console.log(gemRed);
+    console.log(gemGreen);
+    console.log(gemPurple);
+    console.log(gemBlue);
+
     // display wins and losses
     $("#wins").text(wins);
     $("#losses").text(losses);
 
+    // display total score
+    $("#score").text(totalScore);
 
-
-
+    // Onclick Events
 
 });
