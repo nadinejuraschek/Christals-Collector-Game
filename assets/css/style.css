@@ -1,19 +1,102 @@
+/*******************************************
+COLORS
+#C5D86D
+#FF715B
+#7dd2f0
+#37323E
+
+FONTS
+Megrim
+Raleway
+*******************************************/
+
 body {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("../images/congruent_pentagon.png");
+  color: #37323e;
   font-family: "Raleway", Arial, sans-serif;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c5d86d;
+  text-decoration: none;
 }
 
 /*******************************************
 HEADER
 *******************************************/
+.header {
+  background-color: #37323e;
+  height: 5rem;
+  text-align: center;
+}
+
+.gem-icon {
+  width: 50px;
+}
+
+.game-name {
+  color: #ffffff;
+  font-family: "Megrim", Arial, sans-serif;
+}
 
 /*******************************************
 INSTRUCTIONS
 *******************************************/
+.instructions {
+  background-color: #ffffff;
+  border-radius: 25px;
+  margin-top: 1rem;
+  padding: 2rem;
+}
 
+.instructions-headline {
+  color: #ff715b;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.instructions-text {
+  list-style: circle;
+  margin-bottom: 0;
+}
 /*******************************************
 GAME CONTENT
 *******************************************/
+.wins-and-losses {
+  font-weight: 800;
+  height: 120px;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gem-row {
+  text-align: center;
+}
+
+.gem {
+  width: 15%;
+}
 
 /*******************************************
 FOOTER
 *******************************************/
+.icon-copyright {
+  background-color: #37323e;
+  color: #ffffff;
+  font-size: 0.75rem;
+  text-align: center;
+}

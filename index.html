@@ -23,35 +23,53 @@
   </head>
   <body>
     <!-- STICKY HEADER -->
-    <div class="container-fluid">
-      <h1 class="gameName">
-        <img src="assets/images/gems.png" alt="gems-icon" /> Chrystals Collector
+    <div class="container-fluid header">
+      <h1 class="game-name">
+        <img class="gem-icon" src="assets/images/gems.png" alt="gems-icon" /> Chrystals Collector
       </h1>
     </div>
     <!-- INSTRUCTIONS -->
-    <p class="instructions">
-      You will be given a random number at the start of the game. <br />
-      There are four chrystals below. By clicking on a chrystal you will add a
-      specific amount of points to your total score. <br />
-      You win the game by matching your total score to the random number and you
-      lose the game if your total score goes above it. <br />
-      The value of each chrystal is hidden from you until you click on it.
-      <br />
-      Each time when the game starts, it will change the chrystals' values.
-    </p>
-    <!-- GAME CONTENT -->
-    <div id="randomNum"></div>
-    <div id="wins"></div>
-    <div id="losses"></div>
-    <div class="gems">
-      <img src="assets/images/gem_green.png" alt="emerald" />
-      <img src="assets/images/gem_red.png" alt="ruby" />
-      <img src="assets/images/gem_blue.png" alt="sapphire" />
-      <img src="assets/images/gem_diamond.png" alt="diamond" />
+    <div class="container instructions">
+      <h3 class="instructions-headline">How To Play</h3>
+      <ul class="instructions-text">
+        <li>You will be given a random number at the start of the game.</li>
+        <li>There are four chrystals below. By clicking on a chrystal you will add a
+        specific amount of points to your total score.</li>
+        <li>You win the game by matching your total score to the random number and you
+        lose the game if your total score goes above it.</li>
+        <li>The value of each chrystal is hidden from you until you click on it.</li>
+        <li>Each time when the game starts, it will change the chrystals' values.</li>
+      </ul>
     </div>
-    <div id="score"></div>
+    <!-- GAME CONTENT -->
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6">
+          <div id="randomNum" class="wins-and-losses"></div>
+        </div>
+        <div class="col-3">
+          <div class="wins-and-losses"="wins">Wins
+            <span id="wins"></span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="wins-and-losses">Losses
+            <span id="losses"></span>
+          </div>
+        </div>
+        <div class="col-12 gem-row">
+          <img id="gem-red" class="gem" src="assets/images/gem_red.png" alt="ruby" />
+          <img id="gem-green" class="gem" src="assets/images/gem_green.png" alt="emerald" />
+          <img id="gem-purple" class="gem" src="assets/images/gem_purple.png" alt="sapphire" />
+          <img id="gem-blue" class="gem" src="assets/images/gem_diamond.png" alt="diamond" />
+        </div>
+        <div class="wins-and-losses">Total Score 
+          <span id="score"></span>
+        </div>
+      </div>
+    </div>
     <!-- FOOTER -->
-    <div class="icon-copyright">
+    <div class="fixed-bottom icon-copyright">
       Icons made by
       <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
         >Freepik</a
