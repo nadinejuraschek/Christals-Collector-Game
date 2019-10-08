@@ -11,8 +11,6 @@ var gemGreen = 0;
 var gemPurple = 0;
 var gemBlue = 0;
 
-var gameOver = false;
-
 /*******************************************
 FUNCTIONS
 *******************************************/
@@ -35,7 +33,11 @@ function getRandomGem(min, max) {
     return randomGem = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 }
 
-$(document).ready(function () {
+function reset() {
+    totalScore = 0;
+}
+
+function play() {
     // display random Number chosen by computer
     getRandomInt();
     $("#random").text(randomNum);
@@ -59,64 +61,80 @@ $(document).ready(function () {
     $("#score").text(totalScore);
 
     // Onclick Events
+    // Red Gem
     $("#gem-red").on("click", function () {
         if (totalScore > randomNum) {
             losses++;
             $("#message").text("You lost!");
             $("#losses").text(losses);
+            reset();
         } else if (totalScore === randomNum) {
             wins++;
             $("#message").text("You won!");
             $("#wins").text(wins);
+            reset();
         } else {
             totalScore += gemRed;
         }
         $("#score").text(totalScore);
     });
-
+    // Green Gem
     $("#gem-green").on("click", function () {
         if (totalScore > randomNum) {
             losses++;
             $("#message").text("You lost!");
             $("#losses").text(losses);
+            reset();
         } else if (totalScore === randomNum) {
             wins++;
             $("#message").text("You won!");
             $("#wins").text(wins);
+            reset();
         } else {
             totalScore += gemGreen;
         }
         $("#score").text(totalScore);
     });
-
+    // Purple Gem
     $("#gem-purple").on("click", function () {
         if (totalScore > randomNum) {
             losses++;
             $("#message").text("You lost!");
             $("#losses").text(losses);
+            reset();
         } else if (totalScore === randomNum) {
             wins++;
             $("#message").text("You won!");
             $("#wins").text(wins);
+            reset();
         } else {
             totalScore += gemPurple;
         }
         $("#score").text(totalScore);
     });
-
+    // Blue Gem
     $("#gem-blue").on("click", function () {
         if (totalScore > randomNum) {
             losses++;
             $("#message").text("You lost!");
             $("#losses").text(losses);
+            reset();
         } else if (totalScore === randomNum) {
             wins++;
             $("#message").text("You won!");
             $("#wins").text(wins);
+            reset();
         } else {
             totalScore += gemBlue;
         }
         $("#score").text(totalScore);
     });
+}
 
+/*******************************************
+GAME CODE
+*******************************************/
+
+$(document).ready(function () {
+    play();
 });
