@@ -35,10 +35,6 @@ function getRandomGem(min, max) {
 
 function reset() {
     totalScore = 0;
-    gemRed = 0;
-    gemGreen = 0;
-    gemPurple = 0;
-    gemBlue = 0;
     play();
 }
 
@@ -70,12 +66,12 @@ function play() {
     $("#gem-red").on("click", function () {
         if (totalScore > randomNum) {
             losses++;
-            $("#message").text("You lost!");
+            $("#message").text("You lost!").addClass("red-text");
             $("#losses").text(losses);
             reset();
         } else if (totalScore === randomNum) {
             wins++;
-            $("#message").text("You won!");
+            $("#message").text("You won!").addClass("green-text");
             $("#wins").text(wins);
             reset();
         } else {
@@ -87,12 +83,12 @@ function play() {
     $("#gem-green").on("click", function () {
         if (totalScore > randomNum) {
             losses++;
-            $("#message").text("You lost!");
+            $("#message").text("You lost!").addClass("red-text");
             $("#losses").text(losses);
             reset();
         } else if (totalScore === randomNum) {
             wins++;
-            $("#message").text("You won!");
+            $("#message").text("You won!").addClass("green-text");
             $("#wins").text(wins);
             reset();
         } else {
@@ -104,12 +100,12 @@ function play() {
     $("#gem-purple").on("click", function () {
         if (totalScore > randomNum) {
             losses++;
-            $("#message").text("You lost!");
+            $("#message").text("You lost!").addClass("red-text");
             $("#losses").text(losses);
             reset();
         } else if (totalScore === randomNum) {
             wins++;
-            $("#message").text("You won!");
+            $("#message").text("You won!").addClass("green-text");
             $("#wins").text(wins);
             reset();
         } else {
@@ -121,12 +117,12 @@ function play() {
     $("#gem-blue").on("click", function () {
         if (totalScore > randomNum) {
             losses++;
-            $("#message").text("You lost!");
+            $("#message").text("You lost!").addClass("red-text");
             $("#losses").text(losses);
             reset();
         } else if (totalScore === randomNum) {
             wins++;
-            $("#message").text("You won!");
+            $("#message").text("You won!").addClass("green-text");
             $("#wins").text(wins);
             reset();
         } else {

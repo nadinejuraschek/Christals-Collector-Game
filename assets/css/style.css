@@ -2,7 +2,6 @@
 COLORS
 #C5D86D
 #FF715B
-#7dd2f0
 #37323E
 
 FONTS
@@ -83,6 +82,14 @@ GAME CONTENT
   padding: 1rem;
   text-align: center;
   text-transform: uppercase;
+}
+
+.red-text {
+  color: #ff715b;
+}
+
+.green-text {
+  color: #c5d86d;
 }
 
 .gem-row {
