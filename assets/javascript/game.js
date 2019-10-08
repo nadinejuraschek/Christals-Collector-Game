@@ -35,6 +35,11 @@ function getRandomGem(min, max) {
 
 function reset() {
     totalScore = 0;
+    gemRed = 0;
+    gemGreen = 0;
+    gemPurple = 0;
+    gemBlue = 0;
+    play();
 }
 
 function play() {
